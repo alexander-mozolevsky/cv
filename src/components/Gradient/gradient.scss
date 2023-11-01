@@ -1,0 +1,26 @@
+@import '../../styles/variables.scss';
+
+.gradient {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  filter: blur(20px);
+  border-width: 2px;
+  border-color: red;
+
+  &.primary {
+    background: radial-gradient(circle, $primary-color, $primary-color);
+  }
+
+  &.secondary {
+    background: radial-gradient(circle, $secondary-color, $secondary-color);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .gradient {
+    max-width: 250px;
+    max-height: 250px;
+  }
+}

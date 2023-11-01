@@ -1,0 +1,9 @@
+@import '../../styles/variables.scss';
+
+.divider {
+  max-width: 30%;
+  width: 100%;
+  margin: $unit-32;
+  height: $unit-2;
+  background-color: $primary-color;
+}

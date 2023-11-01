@@ -1,0 +1,115 @@
+{
+  "name": "Alexander Mozolevsky",
+  "title": "Chief Software Engineer I",
+  "cv": "https://alexander-mozolevsky.s3.eu-central-1.amazonaws.com/Aliaksandr+Mazaleuski+-+Chief+Software+Engineer+I.pdf",
+  "email": "mailto:alexander.mozolevsky@gmail.com?subject=[Hiring Opportunity]: <Company Name>",
+  "summary": "A seasoned software engineer with 9+ years of diverse experience in developing cutting-edge solutions across a wide range of industries, including FinTech, Multimedia, Jurisprudence, Service Sector, Technology, Healthcare, and Enterprise. Adept in utilizing a variety of technologies to deliver compelling user experiences, from front-end interfaces to mobile systems. Possessing excellent communication skills and a knack for collaborating effectively with cross-functional teams. Proven ability to work in fast-paced, Agile environments and to quickly adapt to new technologies and frameworks. Self-directed and driven, with a track record of delivering high-quality, reliable code in challenging circumstances",
+  "contacts": {
+    "location": "Poland, Warsaw",
+    "email": "alexander.mozolevsky@gmail.com",
+    "phone": "+48571439488"
+  },
+  "skilled_in": [
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "React-Native",
+    "NodeJS",
+    "AWS"
+  ],
+  "technologies": [
+    {
+      "category": "Programming Languages",
+      "technologies": ["JavaScript", "TypeScript", "NodeJS"]
+    },
+    {
+      "category": "Frameworks",
+      "technologies": ["React-Native", "NextJS", "NestJS"]
+    },
+    {
+      "category": "Libraries",
+      "technologies": [
+        "React",
+        "Styled-Components",
+        "Firebase",
+        "React-Apollo",
+        "React-Navigation",
+        "React-Native-Webrtc",
+        "React-Native-Gesture-Handler",
+        "Lottie",
+        "Animated",
+        "Notifee",
+        "etc."
+      ]
+    },
+    {
+      "category": "State Managers",
+      "technologies": [
+        "Context API",
+        "Redux",
+        "Redux-Toolkit",
+        "React-Apollo",
+        "Mobx",
+        "etc."
+      ]
+    },
+    {
+      "category": "Business Logic",
+      "technologies": ["Redux-Saga", "Redux-Toolkit", "Redux-Thunk"]
+    },
+    {
+      "category": "Storages",
+      "technologies": [
+        "MySQL",
+        "MongoDB",
+        "Redis",
+        "PostgreSQL",
+        "DynamoDB",
+        "Firestore"
+      ]
+    },
+    {
+      "category": "Automatization",
+      "technologies": ["Jenkins", "CircleCI", "Fastlane"]
+    },
+    {
+      "category": "Quality Tools",
+      "technologies": [
+        "Eslint",
+        "Tslint",
+        "Prettier",
+        "Husky",
+        "Commit-message",
+        "SonarQube"
+      ]
+    },
+    {
+      "category": "Testing",
+      "technologies": ["Jest", "Enzyme", "React-Native-Testing-Library"]
+    },
+    {
+      "category": "Cloud",
+      "technologies": [
+        "AWS (S3 / EC2 / SNS / SES / Lambda / App Sync / API Gateway / etc.)"
+      ]
+    },
+    {
+      "category": "Other",
+      "technologies": [
+        "Git",
+        "Docker",
+        "i18n",
+        "RRule",
+        "TypeORM",
+        "Env",
+        "Passport",
+        "JWT",
+        "Reselect",
+        "Storybook",
+        "Yarn",
+        "Gulp",
+        "etc."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+@import '../../styles/variables.scss';
+
+.chip {
+  position: relative;
+  background-color: $secondary-color;
+  padding: $unit-8 $unit-16;
+  border-radius: $unit-8;
+  margin: $unit-8;
+  flex-shrink: 0;
+
+  .line {
+    position: absolute;
+    height: 2px;
+    border-radius: $unit-2;
+    width: 0%;
+    background-color: $static-white;
+    transition: width 0.4s;
+  }
+
+  &:hover {
+    .line {
+      width: calc(100% - $unit-32);
+    }
+  }
+}
