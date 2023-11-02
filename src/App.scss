@@ -5,7 +5,7 @@
   height: 100%;
 }
 
-.header {
+header {
   margin: $unit-32;
   display: flex;
   flex-direction: row;
@@ -234,5 +234,55 @@ span {
         margin-left: 0px;
       }
     }
+  }
+}
+
+@media print {
+  header {
+    display: none;
+  }
+
+  footer {
+    >:not(:last-child) {
+      display: none;
+    }
+  }
+
+  .core {
+    box-shadow: none;
+
+    .summary {
+      max-width: 95%;
+      box-shadow: none;
+    }
+  }
+
+  .left-container {
+    top: $unit-64;
+    left: $unit-32;
+  }
+
+
+  .right-container {
+    bottom: $unit-64;
+    right: $unit-32;
+  }
+
+  .technology-list {
+    max-width: 95%;
+    box-shadow: none;
+  }
+
+  .heading {
+    margin-bottom: 0px;
+    margin-top: $unit-32;
+
+    &.technologies {
+      page-break-before: always;
+    }
+  }
+
+  .image {
+    box-shadow: none;
   }
 }

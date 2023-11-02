@@ -19,7 +19,7 @@ function App() {
 
   return (
     <div className='core'>
-      <header className='header'>
+      <header>
         <Button variant='bordered' onClick={handleClickDownload}>Download CV</Button>
         <Button variant='filled' onClick={handleClickContactMe}>Contact me</Button>
       </header>
@@ -53,7 +53,7 @@ function App() {
         {data.skilled_in.map(skill => <Chip key={skill}>{skill}</Chip>)}
       </div>
       <Divider />
-      <span className='heading'>Technologies</span>
+      <span className='heading technologies'>Technologies</span>
       <div className='technology-list'>
         {data.technologies.map(({ category, technologies }) => 
           <div className='technology' key={category}>
@@ -72,7 +72,7 @@ function App() {
           <span>OR</span>
           <Button variant='filled' onClick={handleClickContactMe}>Contact me</Button>
         </div>
-        <span className='updated'>This information was last updated on November 1, 2023</span>
+        <span className='updated'>CV details were updated on November 1, 2023</span>
       </footer>
     </div>
   )

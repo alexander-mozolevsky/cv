@@ -7,3 +7,9 @@
   height: $unit-2;
   background-color: $primary-color;
 }
+
+@media print {
+  .divider {
+    display: none;
+  }
+}
