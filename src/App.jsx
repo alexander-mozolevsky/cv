@@ -29,23 +29,28 @@ function App() {
             {data.name.split(' ').map((part) => <span key={part}>{part}</span>)}
           </div>
           <div className='title'>
-
-          <span >{data.title}</span>
+          <span>{data.title}</span>
           </div>
         </div>
         <Gradient variant='primary' styles={{ width: 300, height: 300, right: 0, top: -32 }}/>
         <Gradient variant='secondary' styles={{ width: 400, height: 400, right: 64, top: 32}}/>
         <div className="image">
-          <img src={photo} />
+          <img src={photo} alt='My photo'/>
         </div>
         <div className='right-container'>
           <span>{data.contacts.location}</span>
-          <span>{data.contacts.email}</span>
-          <span>{data.contacts.phone}</span>
+          <span><a href={`mailto:${data.contacts.email}`}>{data.contacts.email}</a></span>
+          <span><a href={`tel:${data.contacts.phone}`}>{data.contacts.phone}</a></span>
+          <span><a href={data.contacts.linkedin}>LinkedIn</a></span>
         </div>
       </div>
       <div className='core summary'>
-        <span>{data.summary}</span>
+        <span>&nbsp;&nbsp;&nbsp;{data.summary}</span>
+      </div>
+      <Divider />
+      <span className='heading'>Speaking languages</span>
+      <div className='skills'>
+        {data.languages.map(language => <Chip key={language.language} gray>{`${language.language} (${language.level})`}</Chip>)}
       </div>
       <Divider />
       <span className='heading'>Skilled in</span>
@@ -72,7 +77,7 @@ function App() {
           <span>OR</span>
           <Button variant='filled' onClick={handleClickContactMe}>Contact me</Button>
         </div>
-        <span className='updated'>CV details were updated on November 1, 2023</span>
+        <span className='updated'>CV details were updated on June 29, 2024</span>
       </footer>
     </div>
   )

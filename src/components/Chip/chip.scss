@@ -1,6 +1,7 @@
 @import '../../styles/variables.scss';
 
 .chip {
+  cursor: pointer;
   position: relative;
   background-color: $secondary-color;
   padding: $unit-8 $unit-16;
@@ -21,5 +22,9 @@
     .line {
       width: calc(100% - $unit-32);
     }
+  }
+
+  &.grayed {
+    background-color: $passive-color;
   }
 }
