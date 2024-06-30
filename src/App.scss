@@ -1,8 +1,25 @@
 @import './styles/variables.scss';
 
-#root {
+html, #root {
   flex: 1;
   height: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+}
+
+a {
+  font-size: 14px;
+  font-weight: 500;
+  color: $link-color;
+  text-decoration: inherit;
+
+  &:hover {
+    color: $link-color;
+  }
 }
 
 header {
@@ -18,7 +35,6 @@ header {
   margin-right: auto;
   max-width: 1024px;
   background-color: $background-color;
-  box-shadow: 0 0 15px 5px $background-color;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,7 +50,7 @@ header {
 
   &.summary {
     z-index: 1;
-    background-color: $static-white;
+    background-color: $root-background;
     padding: $unit-32;
     max-width: 70%;
     border-radius: $unit-16;
@@ -46,7 +62,7 @@ header {
     }
 
     &:hover {
-      box-shadow: 0 0 15px 0 $static-white;
+      box-shadow: 0 0 15px 0 $root-background;
     }
   }
 }
@@ -110,7 +126,7 @@ header {
     max-width: 270px;
     min-width: 270px;
     min-height: 270px;
-    object-fit: cover;
+    object-fit:fill;
     object-position: 25% 25%;
 
     transition: all 0.4s;
@@ -124,6 +140,9 @@ header {
 .skills {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .heading {
@@ -135,7 +154,7 @@ header {
 
 .technology-list {
   max-width: 70%;
-  background-color: $static-white;
+  background-color: $root-background;
   padding: $unit-32;
   border-radius: $unit-16;
 
@@ -194,7 +213,7 @@ span {
     bottom: $unit-16;
 
     > span {
-      background-color: $static-white;
+      background-color: $root-background;
       border-radius: $unit-8;
       padding: $unit-8;
       margin-bottom: $unit-2;
@@ -207,7 +226,7 @@ span {
 
     .name,
     .title {
-      background-color: $static-white;
+      background-color: $root-background;
       border-radius: $unit-8;
       padding: $unit-8;
     }
@@ -285,5 +304,99 @@ span {
 
   .image {
     box-shadow: none;
+  }
+}
+
+
+@media (prefers-color-scheme: light) {
+  :root, body {
+    background-color: $root-background;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root, body {
+    background-color: $dark-root-background;
+  }
+
+  .core {
+    background-color: $dark-background-color;
+
+    .summary {
+      background-color: $dark-root-background;
+
+      &:hover {
+        box-shadow: 0 0 15px 5px $dark-root-background;
+      }
+    }
+
+    &.gradients > .gradient {
+      &.primary {
+        background: radial-gradient(circle, $dark-primary-color, $dark-primary-color);
+      }
+      &.secondary {
+        background: radial-gradient(circle, $dark-secondary-color, $dark-secondary-color);
+      }
+    }
+  }
+
+  .technology-list {
+    background-color: $dark-root-background;
+  }
+
+  .skills {
+    .chip {
+      background-color: $dark-secondary-color;
+
+      .line {
+        background-color: $dark-text-color;
+      }
+
+      &.grayed {
+        background-color: $dark-grayed-chip-color;
+      }
+    }
+  }
+
+  span,
+  .heading {
+    color: $dark-text-color;
+  }
+
+  a {
+    color: $dark-link-color;
+
+    &:hover {
+      text-decoration: underline;
+      color: $dark-link-color;
+    }
+  }
+
+  @media screen and (max-width: 860px) {
+    .right-container {
+      > span {
+        background-color: $dark-root-background;
+      }
+    }
+  
+    .left-container {
+      .name,
+      .title {
+        background-color: $dark-root-background;
+      }
+    }
+  }
+
+  .button {
+    color: $dark-text-color;
+  
+    &.bordered {
+      background-color: $dark-root-background;
+      border-color: $dark-primary-color;
+    }
+  
+    &.filled {
+      background-color: $dark-primary-color;
+    }
   }
 }

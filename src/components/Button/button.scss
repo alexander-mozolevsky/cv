@@ -15,7 +15,7 @@
   transition: all 0.2s;
 
   &.bordered {
-    background-color: $static-white;
+    background-color: $root-background;
     border-color: $primary-color;
   }
 
