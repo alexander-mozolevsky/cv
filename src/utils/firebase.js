@@ -13,11 +13,18 @@ const firebaseConfig = {
 
 export const init = () => {
   console.log("Init firebase");
-  console.log(import.meta.env.VITE_measurementId);
   const app = initializeApp(firebaseConfig);
+
   return app;
 };
 
 export const ANALYTICS_KEYS = {
   VISIT_MAIN_PAGE: "VISIT_MAIN_PAGE",
+  DOWNLOAD_TOP_BUTTON: "DOWNLOAD_TOP_BUTTON",
+  CONTACT_ME_TOP_BUTTON: "CONTACT_ME_TOP_BUTTON",
+  DOWNLOAD_BOTTOM_BUTTON: "DOWNLOAD_BOTTOM_BUTTON",
+  CONTACT_ME_BOTTOM_BUTTON: "CONTACT_ME_BOTTOM_BUTTON",
+  PRESS_LINKEDIN: "PRESS_LINKEDIN",
+  PRESS_PHONE: "PRESS_PHONE",
+  PRESS_EMAIL: "PRESS_EMAIL",
 };
