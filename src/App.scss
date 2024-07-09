@@ -39,6 +39,10 @@ header {
   flex-direction: column;
   align-items: center;
 
+  span {
+    color: $text-color;
+  }
+
   &.gradients {
     position: relative;
     display: flex;
@@ -202,11 +206,6 @@ footer {
   font-size: 0.8rem;
 }
 
-span {
-  color: $text-color;
-}
-
-
 @media screen and (max-width: 860px) {
   .right-container {
     right: $unit-16;
@@ -321,6 +320,10 @@ span {
 
   .core {
     background-color: $dark-background-color;
+
+    span {
+      color: $dark-text-color;
+    }
 
     .summary {
       background-color: $dark-root-background;

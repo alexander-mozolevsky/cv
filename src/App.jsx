@@ -7,6 +7,9 @@ import photo from './assets/photo.webp';
 import data from './data.json';
 
 import './App.scss'
+import { useEffect } from 'react';
+import { getAnalytics, logEvent } from 'firebase/analytics';
+import { ANALYTICS_KEYS, init } from './utils/firebase';
 
 function App() {
   const handleClickDownload = () => {
@@ -16,6 +19,12 @@ function App() {
   const handleClickContactMe = () => {
     window.open(data.email);
   }
+
+  useEffect(() => {
+    logEvent(getAnalytics(), ANALYTICS_KEYS.VISIT_MAIN_PAGE, {
+      theme: window?.matchMedia?.('(prefers-color-scheme:dark)')
+    });
+  }, []);
 
   return (
     <div className='core'>
